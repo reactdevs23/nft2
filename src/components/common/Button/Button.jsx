@@ -1,0 +1,122 @@
+import React from "react";
+import clsx from "clsx";
+import classes from "./Button.module.css";
+import { Link } from "react-router-dom";
+import { ImSpinner } from "react-icons/im";
+
+const Button = ({
+  children,
+  onClick,
+  href,
+  transparent,
+  neutral1,
+  neutral7,
+  uppercase,
+  wFull,
+  className,
+  to,
+  loading,
+  ...rest
+}) => {
+  return (
+    <>
+      {onClick ? (
+        <button
+          {...rest}
+          className={clsx(
+            className,
+            classes.button,
+            transparent && classes.transparent,
+            neutral1 && classes.neutral1,
+            neutral7 && classes.neutral7,
+            uppercase && classes.uppercase,
+            wFull && classes.wFull,
+            loading && classes.loading
+          )}
+          onClick={onClick}
+          disabled={loading}
+        >
+          {loading ? (
+            <>
+              <ImSpinner className={classes.spinner} /> Processing
+            </>
+          ) : (
+            children
+          )}
+        </button>
+      ) : href ? (
+        <a
+          {...rest}
+          className={clsx(
+            className,
+            classes.button,
+            transparent && classes.transparent,
+            neutral1 && classes.neutral1,
+            neutral7 && classes.neutral7,
+            uppercase && classes.uppercase,
+            wFull && classes.wFull,
+            loading && classes.loading
+          )}
+          href={href}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {loading ? (
+            <>
+              <ImSpinner className={classes.spinner} /> Processing
+            </>
+          ) : (
+            children
+          )}
+        </a>
+      ) : to ? (
+        <Link
+          {...rest}
+          className={clsx(
+            className,
+            classes.button,
+            transparent && classes.transparent,
+            neutral1 && classes.neutral1,
+            neutral7 && classes.neutral7,
+            uppercase && classes.uppercase,
+            wFull && classes.wFull,
+            loading && classes.loading
+          )}
+          to={to}
+        >
+          {loading ? (
+            <>
+              <ImSpinner className={classes.spinner} /> Processing
+            </>
+          ) : (
+            children
+          )}
+        </Link>
+      ) : (
+        <button
+          {...rest}
+          className={clsx(
+            className,
+            classes.button,
+            transparent && classes.transparent,
+            neutral1 && classes.neutral1,
+            neutral7 && classes.neutral7,
+            uppercase && classes.uppercase,
+            wFull && classes.wFull,
+            loading && classes.loading
+          )}
+        >
+          {loading ? (
+            <>
+              <ImSpinner className={classes.spinner} /> Processing
+            </>
+          ) : (
+            children
+          )}
+        </button>
+      )}
+    </>
+  );
+};
+
+export default Button;

@@ -1,0 +1,36 @@
+.sliderWrapper {
+  position: relative;
+  max-width: 100%; /* Ensures the slider doesn't exceed its container */
+}
+
+.collections-swiper {
+  width: 100%;
+  padding-bottom: 80px;
+}
+/* .swiper-scrollbar {
+} */
+.collections-swiper .swiper-scrollbar {
+  position: absolute;
+
+  left: 50% !important;
+  transform: translateX(-50%);
+  bottom: 0px;
+  height: 5px;
+  max-width: 256px;
+  width: 100%;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 2.5px;
+  z-index: 10;
+}
+
+.swiper-scrollbar-drag {
+  background: var(--Neutral-7);
+  border-radius: 2.5px;
+}
+
+@media only screen and (max-width: 520px) {
+  .swiper {
+    padding-bottom: 32px;
+  }
+}

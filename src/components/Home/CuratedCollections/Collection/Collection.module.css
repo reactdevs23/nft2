@@ -1,0 +1,50 @@
+.collection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.image {
+  width: 100%;
+  border-radius: 16px;
+  display: block;
+  object-fit: cover;
+}
+.image:first-child {
+  grid-column: 1/-1;
+}
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+}
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.author {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+}
+.avater {
+  max-width: 32px;
+  width: 100%;
+  aspect-ratio: 1/-1;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+}

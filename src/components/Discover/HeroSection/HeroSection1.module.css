@@ -1,0 +1,66 @@
+.wrapper {
+  margin-top: 85px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.container {
+  position: absolute;
+  max-width: 1440px;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  padding-top: 80px;
+}
+
+.nextAndPrevButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-left: auto;
+}
+.prevButton,
+.nextButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border-radius: 60px;
+  background: var(--Neutral-3);
+  pointer-events: auto;
+}
+.arrow {
+  font-size: 24px;
+  color: var(--Neutral-7);
+}
+.activeButton {
+  background: var(--Neutral-7);
+}
+.activeButton .arrow {
+  color: var(--Neutral-1);
+}
+
+@media only screen and (max-width: 1199px) {
+  .prevButton,
+  .nextButton {
+    width: 48px;
+    height: 48px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .wrapper {
+    margin-top: 60px;
+  }
+  .container {
+    gap: 60px;
+    top: 16px;
+    right: 16px;
+    padding-top: 40px;
+  }
+}

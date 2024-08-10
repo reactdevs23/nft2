@@ -1,0 +1,118 @@
+.heading {
+  font-style: normal;
+  font-weight: 800;
+  line-height: 106%;
+  font-size: 30px;
+  color: var(--Neutral-1);
+  letter-spacing: -0.96px;
+}
+.neutral1 {
+  color: var(--Neutral-1);
+}
+.neutral7 {
+  color: var(--Neutral-7);
+}
+.h1 {
+  font-size: 80px;
+  letter-spacing: -1.6px;
+}
+.h2 {
+  font-size: 64px;
+  letter-spacing: -1.28px;
+}
+.h3 {
+  font-size: 48px;
+}
+.h4 {
+  font-size: 32px;
+}
+.xs {
+  font-size: 12px;
+}
+.sm {
+  font-size: 14px;
+}
+.md {
+  font-size: 14px;
+}
+.base {
+  font-size: 16px;
+}
+.lg {
+  font-size: 18px;
+}
+.xl {
+  font-size: 20px;
+}
+.xl2 {
+  font-size: 24px;
+}
+
+.xl4 {
+  font-size: 36px;
+}
+.xl5 {
+  font-size: 48px;
+}
+
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+.bold {
+  font-weight: 700;
+}
+.semiBold {
+  font-weight: 500;
+}
+.font600 {
+  font-weight: 600;
+}
+.regular {
+  font-weight: 400;
+}
+@media only screen and (max-width: 1199px) {
+  .h1 {
+    font-size: 60px;
+  }
+  .h2 {
+    font-size: 48px;
+  }
+  .h3 {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .h1 {
+    font-size: 48px;
+    letter-spacing: -1px;
+  }
+  .h2 {
+    font-size: 40px;
+    letter-spacing: -0.6px;
+  }
+  .h3 {
+    font-size: 32px;
+  }
+  .h4 {
+    font-size: 24px;
+  }
+  .xl2 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .h2 {
+    font-size: 32px;
+    letter-spacing: -0.6px;
+  }
+  .h3 {
+    font-size: 28px;
+    letter-spacing: -0.3px;
+  }
+  .lg {
+    font-size: 16px;
+  }
+}

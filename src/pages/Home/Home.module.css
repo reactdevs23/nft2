@@ -1,0 +1,31 @@
+.wrapper {
+  background: linear-gradient(
+    to right,
+    var(--Accent-4) 50%,
+    var(--Neutral-7) 50%
+  );
+}
+
+.downloadAndNewsLetter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 160px;
+  min-height: 600px;
+}
+@media only screen and (max-width: 1199px) {
+  .downloadAndNewsLetter {
+    gap: 80px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .wrapper {
+    background: none;
+  }
+  .downloadAndNewsLetter {
+    grid-template-columns: 1fr;
+    gap: 0;
+    max-width: 100%;
+    width: 100%;
+    min-height: 800px;
+  }
+}

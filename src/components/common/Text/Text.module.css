@@ -1,0 +1,99 @@
+.text {
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+  font-size: 14px;
+  color: var(--Neutral-1);
+  letter-spacing: -0.18px;
+}
+.neutral1 {
+  color: var(--Neutral-1);
+}
+.neutral4 {
+  color: var(--Neutral-4);
+}
+.neutral3 {
+  color: var(--Neutral-3);
+}
+.neutral5 {
+  color: var(--Neutral-5);
+}
+.neutral6 {
+  color: var(--Neutral-6);
+}
+.neutral7 {
+  color: var(--Neutral-7);
+}
+.neutral8 {
+  color: var(--Neutral-8);
+}
+.xs {
+  font-size: 12px;
+}
+.sm {
+  font-size: 14px;
+}
+.md {
+  font-size: 14px;
+}
+.base {
+  font-size: 16px;
+}
+.lg {
+  font-size: 18px;
+}
+.xl {
+  font-size: 20px;
+}
+.xl2 {
+  font-size: 24px;
+}
+.xl3 {
+  font-size: 30px;
+}
+.xl4 {
+  font-size: 32px;
+}
+
+.textCenter {
+  text-align: center;
+}
+.textRight {
+  text-align: right;
+}
+.regular {
+  font-weight: 400;
+}
+.bold {
+  font-weight: 700;
+}
+.semiBold {
+  font-weight: 500;
+}
+.font600 {
+  font-weight: 600;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 991px) {
+  .lg {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .xl2 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .lg {
+    font-size: 16px;
+  }
+  .xl {
+    font-size: 18px;
+  }
+  .xl2 {
+    font-size: 20px;
+  }
+}

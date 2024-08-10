@@ -1,0 +1,134 @@
+.wrapper {
+  background: var(--Neutral-8);
+  padding: 80px 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
+}
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 32px;
+  width: 100%;
+}
+.heading {
+  padding-bottom: 16px;
+}
+.tab,
+.buyNowButton {
+  color: var(--Neutral-5);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: -0.16px;
+  padding: 8px 24px;
+  border-radius: 40px;
+}
+
+.activeTab {
+  background: var(--Neutral-1);
+  color: var(--Neutral-7);
+}
+.tab:hover {
+  transform: translateY(0);
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 64px 40px;
+  width: 100%;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.infoContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 5px 12px;
+}
+.imgContainer {
+  overflow: hidden;
+  border-radius: 20px;
+}
+.img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.5s ease;
+}
+.img:hover {
+  transform: scale(1.3);
+}
+.buyNow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.buyNowButton {
+  padding: 0;
+}
+.buyers {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  max-width: 75px;
+}
+.buyer {
+  width: 32px;
+
+  border-radius: 50%;
+  display: block;
+}
+.totalCard {
+  padding: 2px 8px;
+
+  border-radius: 12px;
+  background: var(--Neutral-03, #e1e2e2);
+}
+@media only screen and (max-width: 1280px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 991px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    gap: 32px 0;
+  }
+  .cards {
+    gap: 40px 20px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .cards {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    gap: 60px 20px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .tab {
+    padding: 8px 16px;
+  }
+}

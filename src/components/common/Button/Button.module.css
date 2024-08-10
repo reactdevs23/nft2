@@ -1,0 +1,59 @@
+.button {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 133.333%;
+  letter-spacing: -0.2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 32px;
+
+  background: var(--Neutral-1);
+  color: var(--Neutral-7);
+  cursor: pointer;
+  white-space: nowrap;
+  border-radius: 4px;
+
+  text-transform: uppercase;
+  letter-spacing: 2.04px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.neutral1 {
+  background: var(--Neutral-1);
+  color: var(--Neutral-7);
+}
+.neutral7 {
+  background: var(--Neutral-7);
+  color: var(--Neutral-1);
+}
+.transparent {
+  border: 2px solid var(--Neutral-06, #555);
+  background: transparent;
+}
+
+.wFull {
+  width: 100%;
+}
+.spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+  margin-right: 5px; /* Add some space between the spinner and the text */
+}
+.loading {
+  gap: 0px;
+  opacity: 0.8;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
