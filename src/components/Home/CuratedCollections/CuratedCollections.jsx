@@ -16,7 +16,6 @@ import {
   collection3,
   collection4,
   collection5,
-  escapeImg,
 } from "images";
 import { useRef, useState } from "react";
 import { Heading } from "components/common";

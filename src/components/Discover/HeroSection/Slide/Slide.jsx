@@ -1,10 +1,9 @@
-import { Link } from "react-router-dom";
 import classes from "./Slide.module.css";
 import { Button, Heading, Text } from "components/common";
 import { FaArrowRight } from "react-icons/fa6";
-import { escapeImg } from "images";
+
 import CountDown from "../CountDown/CountDown";
-import { useState } from "react";
+
 import clsx from "clsx";
 
 const Slide = ({ title, img, avater, login, time }) => {

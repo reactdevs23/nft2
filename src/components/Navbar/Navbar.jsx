@@ -55,6 +55,7 @@ const Navbar = () => {
             <img src={logo} alt="#" className={classes.logo} />
           </Link>
           <Input
+            placeholder="Search"
             search
             setValue={setSearchValue}
             className={clsx(classes.searchInput, classes.deskstopSearchInput)}
@@ -66,6 +67,7 @@ const Navbar = () => {
             className={[classes.navItems, sidebar && classes.sidebar].join(" ")}
           >
             <Input
+              placeholder="Search"
               search
               setValue={setSearchValue}
               className={clsx(classes.searchInput, classes.mobileSearchInput)}
