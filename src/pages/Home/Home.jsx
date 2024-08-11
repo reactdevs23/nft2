@@ -5,7 +5,6 @@ import classes from "./Home.module.css";
 import Download from "components/Home/Download/Download";
 import clsx from "clsx";
 import NewsLetter from "components/Home/NewsLetter/NewsLetter";
-import Footer from "components/Home/Footer/Footer";
 
 import CuratedCollections from "components/Home/CuratedCollections/CuratedCollections";
 
@@ -13,9 +12,9 @@ const Home = () => {
   return (
     <>
       <HeroSection />
+      <CuratedCollections />
       <Spotlight />
       <Creativity />
-
       <div className={classes.wrapper}>
         <div className={clsx(classes.downloadAndNewsLetter, "container")}>
           <Download />
@@ -23,8 +22,6 @@ const Home = () => {
           <NewsLetter />
         </div>
       </div>
-      <Footer />
-      <CuratedCollections />
     </>
   );
 };

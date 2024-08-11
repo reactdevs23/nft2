@@ -38,7 +38,7 @@ const Button = ({
         >
           {loading ? (
             <>
-              <ImSpinner className={classes.spinner} /> Processing
+              {children} <ImSpinner className={classes.spinner} />
             </>
           ) : (
             children
@@ -63,7 +63,7 @@ const Button = ({
         >
           {loading ? (
             <>
-              <ImSpinner className={classes.spinner} /> Processing
+              {children} <ImSpinner className={classes.spinner} />
             </>
           ) : (
             children
@@ -86,7 +86,7 @@ const Button = ({
         >
           {loading ? (
             <>
-              <ImSpinner className={classes.spinner} /> Processing
+              {children} <ImSpinner className={classes.spinner} />
             </>
           ) : (
             children
@@ -108,7 +108,7 @@ const Button = ({
         >
           {loading ? (
             <>
-              <ImSpinner className={classes.spinner} /> Processing
+              {children} <ImSpinner className={classes.spinner} />
             </>
           ) : (
             children

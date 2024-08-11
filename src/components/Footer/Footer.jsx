@@ -6,8 +6,8 @@ import { TbRectangle } from "react-icons/tb";
 import classes from "./Footer.module.css";
 import { Link } from "react-router-dom";
 
-import { logo } from "../../../images";
-import { Button, Heading, Text } from "../../common";
+import { logo } from "../../images";
+import { Button, Heading, Text } from "../common";
 import clsx from "clsx";
 
 const Footer = () => {
@@ -98,7 +98,11 @@ const Footer = () => {
             <Text neutral4 className={clsx(classes.item, classes.cookiesText)}>
               We use cookies for better service.
             </Text>
-            <Button transparent onClick={() => {}}>
+            <Button
+              transparent
+              onClick={() => {}}
+              className={classes.acceptButton}
+            >
               ACCEPT
             </Button>
           </div>

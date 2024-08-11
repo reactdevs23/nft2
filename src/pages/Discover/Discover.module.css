@@ -2,49 +2,18 @@
   padding-bottom: 80px;
 }
 .container {
-  max-width: 1440px;
+  background: var(--Neutral-1);
 }
+
 .navsAndThemeToggler {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 24px;
   padding-top: 32px;
-}
-.navs {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0px 0;
   border-bottom: 1px solid var(--Neutral-3);
-}
-
-.navContainer {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 32px 32px;
-  padding-top: 0;
   position: relative;
 }
-.navContainer:hover {
-  transform: translateY(0);
-}
 
-.activeNav::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  width: 100%;
-  height: 1px;
-  background: var(--Neutral-7);
-}
-.length {
-  padding: 4px 8px;
-  border-radius: 8px;
-  background: var(--Neutral-3);
-}
 .iconContainer {
   max-width: 48px;
   min-width: 48px;
@@ -55,63 +24,42 @@
   border: 2px solid var(--Neutral-3);
   border-radius: 50%;
   margin-left: auto;
+  transition: 0.3s;
+  cursor: pointer;
 }
+
+.iconContainer:hover {
+  border: 2px solid var(--Neutral-7);
+  transform: translateY(0);
+}
+
 .icon {
   font-size: 24px;
+  color: var(--Neutral-5);
 }
-.loadMoreButton {
-  margin: 0 auto;
-  margin-top: 64px;
-}
-.header {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  align-items: center;
-  gap: 40px;
+
+.wrapper .myNfts {
   padding: 64px 0;
   padding-top: 128px;
 }
-
-@media only screen and (max-width: 991px) {
-  .navs {
-    display: grid;
-    grid-template-columns: auto auto;
-    padding: 0px 16px;
-    gap: 24px 0;
-
-    border: none;
+@media only screen and (max-width: 1199px) {
+  .wrapper .myNfts {
+    padding-top: 100px;
   }
   .navsAndThemeToggler {
-    padding-top: 12px;
-  }
-  .navContainer {
-    border-bottom: 1px solid var(--Neutral-3);
-    justify-content: center;
-
-    padding: 0 12px;
-    padding-bottom: 16px;
+    padding-bottom: 10px;
   }
 }
-@media only screen and (max-width: 767px) {
-  .header {
-    grid-template-columns: 1fr auto;
+@media only screen and (max-width: 991px) {
+  .wrapper .myNfts {
+    padding: 64px 0;
+    padding-top: 80px;
   }
 
-  .hexagon {
-    order: 2;
-  }
-  .tabs {
-    order: 3;
-    grid-column: 1/-1;
+  .navsAndThemeToggler {
+    padding-top: 32px;
   }
 }
+
 @media only screen and (max-width: 767px) {
-  .navs {
-    grid-template-columns: 1fr;
-  }
-  .navContainer {
-    justify-content: flex-start;
-    padding: 0;
-    padding-bottom: 16px;
-  }
 }

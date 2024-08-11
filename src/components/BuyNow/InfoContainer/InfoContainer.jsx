@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classes from "./InfoContainer.module.css";
-import { avater, escapeImg, fullScreenIcon, musicIcon } from "images";
+import { avatar, escapeImg, fullScreenIcon, musicIcon } from "images";
 import { Button, Heading, Text } from "components/common";
 import clsx from "clsx";
 import { FaLink } from "react-icons/fa6";
@@ -35,6 +35,7 @@ const InfoContainer = () => {
   ];
   return (
     <section className={classes.wrapper}>
+      {/* image */}
       <div
         className={clsx(
           classes.imgContainer,
@@ -60,6 +61,7 @@ const InfoContainer = () => {
         <img src={escapeImg} alt="#" className={classes.img} />
       </div>{" "}
       <div className={clsx(classes.infoContainer)}>
+        {/* authors */}
         <div
           className={clsx(classes.createdByAndCollection, classes.container)}
         >
@@ -68,7 +70,7 @@ const InfoContainer = () => {
               Created by
             </Text>
             <div className={classes.authorImgContainer}>
-              <img src={avater} alt="#" className={classes.authorImg} />
+              <img src={avatar} alt="#" className={classes.authorImg} />
             </div>
             <div className={classes.logIn}>
               <Text base neutral7 className={classes.author}>
@@ -95,6 +97,7 @@ const InfoContainer = () => {
           </div>
         </div>
         <hr className={classes.hr} />
+        {/* details */}
         <div className={clsx(classes.detailsContainer, classes.container)}>
           <Heading h4 neutral7>
             Details
@@ -127,10 +130,11 @@ const InfoContainer = () => {
           </Button>
         </div>{" "}
         <hr className={classes.hr} />
+        {/* provenance */}
         <div className={clsx(classes.provenance, classes.container)}>
           {" "}
           <Heading h4 neutral7>
-            Details
+            Provenance
           </Heading>{" "}
           <hr className={classes.hr} />
           <a
@@ -140,7 +144,7 @@ const InfoContainer = () => {
             className={classes.provenanceInfo}
           >
             <div className={classes.authorImgContainer}>
-              <img src={avater} alt="#" className={classes.authorImg} />
+              <img src={avatar} alt="#" className={classes.authorImg} />
             </div>
             <div className={classes.provonenceAuthorInfo}>
               <Text base neutral7 className={classes.mintBy}>

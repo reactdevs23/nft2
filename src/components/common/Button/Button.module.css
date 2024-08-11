@@ -33,7 +33,7 @@
   color: var(--Neutral-1);
 }
 .transparent {
-  border: 2px solid var(--Neutral-06, #555);
+  border: 2px solid var(--Neutral-6);
   background: transparent;
 }
 
@@ -46,7 +46,7 @@
   margin-right: 5px; /* Add some space between the spinner and the text */
 }
 .loading {
-  gap: 0px;
+  gap: 10px;
   opacity: 0.8;
 }
 @keyframes spin {

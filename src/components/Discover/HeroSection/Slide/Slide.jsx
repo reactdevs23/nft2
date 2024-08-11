@@ -5,12 +5,13 @@ import { FaArrowRight } from "react-icons/fa6";
 import { escapeImg } from "images";
 import CountDown from "../CountDown/CountDown";
 import { useState } from "react";
+import clsx from "clsx";
 
 const Slide = ({ title, img, avater, login, time }) => {
   return (
     <div className={classes.slide}>
       <img src={img} alt="Slide" className={classes.image} />
-      <div className={classes.bottomBar}>
+      <div className={clsx(classes.bottomBar, "container")}>
         <div className={classes.leftSide}>
           <div className={classes.top}>
             <Heading h1>{title}</Heading>

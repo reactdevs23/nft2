@@ -37,7 +37,7 @@ const BuyNowPage = () => {
             </Text>
           </div>{" "}
         </div>
-
+        {/* price container */}
         <div className={classes.priceContainer}>
           <Text lg neutral5>
             Total price

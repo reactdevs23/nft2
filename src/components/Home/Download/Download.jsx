@@ -18,10 +18,10 @@ const Download = () => {
         </Text>
 
         <div className={classes.buttonContainer}>
-          <Button neutral7>
+          <Button neutral7 className={classes.button}>
             apple store <AiOutlineApple className={classes.appleIcon} />{" "}
           </Button>{" "}
-          <Button>
+          <Button className={classes.button}>
             google play <RiGoogleLine className={classes.googleIcon} />{" "}
           </Button>
         </div>

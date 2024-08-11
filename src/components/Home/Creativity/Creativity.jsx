@@ -4,12 +4,12 @@ import clsx from "clsx";
 import { LuCircleDot } from "react-icons/lu";
 
 import { Button, Heading, Text } from "components/common";
-import { collectionImg, earnTogether, mintFees } from "images";
+import { collecting, earnTogether, mintFees } from "images";
 
 const Creativity = () => {
   const data = [
     {
-      img: collectionImg,
+      video: collecting,
       title: "Your Collection, your way.",
       infos: [
         "In web3, artists are taking back ownership and control over their creativity. All collections on Crypter are creator-owned smart contracts that will stand the test of time.",
@@ -21,7 +21,7 @@ const Creativity = () => {
       learnMore: "",
     },
     {
-      img: mintFees,
+      video: mintFees,
       title: "Lowest mint fees",
       infos: [
         "Minting an NFT is like adding your signature to a painting. Make your mark in web3 with works that are emblematic of your creative practice.",
@@ -30,7 +30,7 @@ const Creativity = () => {
       learnMore: "",
     },
     {
-      img: earnTogether,
+      video: earnTogether,
       title: "Create together, earn together.",
       infos: [
         "Add a Split to your NFT to seamlessly pay creative collaborators—photographers, producers, choreographers, dancers, poets—and so on.",
@@ -58,7 +58,17 @@ const Creativity = () => {
               className={clsx(classes.card, (i + 1) % 2 === 0 && classes.card2)}
               key={i}
             >
-              <img src={el.img} alt="#" className={classes.img} />
+              <div className={classes.videoContainer}>
+                <video
+                  className={classes.video}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src={el.video} type="video/mp4" />
+                </video>
+              </div>
               <div className={classes.infoContainer}>
                 <Heading h2 neutral7 className={classes.title}>
                   {el.title}
@@ -83,7 +93,11 @@ const Creativity = () => {
                     ))}
                   </div>
                 )}
-                <Button transparent href={el.learnMore}>
+                <Button
+                  transparent
+                  href={el.learnMore}
+                  className={classes.button}
+                >
                   learn more
                 </Button>
               </div>

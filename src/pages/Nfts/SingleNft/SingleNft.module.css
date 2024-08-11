@@ -1,40 +1,27 @@
-.cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px 0;
-
-  width: 100%;
-}
 .card {
   display: flex;
   flex-direction: column;
   gap: 16px;
   position: relative;
-  transition: 0.3s;
   padding: 20px;
   border-radius: 24px;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out,
+    border-color 0.5s ease-in-out;
 }
 
 .card:hover {
-  /* content: " ";
-  position: absolute;
-  width: calc(100% + 40px);
-  height: calc(100% + 40px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-  background: var(--Neutral-7);
-
-  /* z-index: -1; */
+  background-color: var(--bg);
 }
 
 .imgContainer {
   position: relative;
 }
+
 .img {
   width: 100%;
   border-radius: 20px;
 }
+
 .box {
   display: flex;
   padding: 8px 16px;
@@ -42,39 +29,46 @@
   align-items: center;
   gap: 12px;
   border-radius: 12px;
-  background: var(--Neutral-1);
+  background: #a6aead;
   margin-left: auto;
   display: none;
   position: absolute;
   top: 12px;
   left: 12px;
 }
+
 .card:hover .box {
   display: flex;
 }
-.avater {
+
+.avatar {
   width: 40px;
   border-radius: 12px;
 }
+
 .userContainer {
   display: flex;
   align-items: center;
   gap: 12px;
 }
+
 .userImg {
   display: block;
   max-width: 40px;
   width: 100%;
   border-radius: 50%;
 }
+
 .card:hover .author {
-  color: var(--Neutral-1);
+  color: var(--hover-color);
 }
+
 .verifiedIcon {
   max-width: 24px;
   width: 100%;
   margin-left: auto;
 }
+
 .priceContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -83,10 +77,13 @@
   border-radius: 1px;
   border-top: 1px solid var(--Neutral-3);
   padding-top: 16px;
+  transition: border-color 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
+
 .card:hover .priceContainer {
   border-top: 1px solid var(--Neutral-6);
 }
+
 .priceContainer::before {
   content: "";
   position: absolute;
@@ -95,51 +92,61 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #d9d9d9;
+  background: var(--Neutral-3);
+  transition: background-color 0.5s ease-in-out;
 }
+
 .card:hover .priceContainer::before {
   background: var(--Neutral-6);
 }
+
 .currentBid,
 .buyNow {
   display: flex;
   flex-direction: column;
   gap: 0px;
 }
+
 .bid {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 8px;
   align-items: center;
 }
+
 .circle {
   font-size: 8px;
   color: #fd5d47;
 }
+
 .card:hover .bidPrice,
 .card:hover .price {
-  color: var(--Neutral-1);
+  color: var(--hover-color);
 }
 
-@media only screen and (max-width: 1440px) {
-  .cards {
-    grid-template-columns: repeat(3, 1fr);
+@media only screen and (max-width: 520px) {
+  .card {
+    padding: 5px;
   }
-}
 
-@media only screen and (max-width: 991px) {
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 750px;
-    width: 100%;
-    margin: 0 auto;
+  .card:hover .author {
+    color: var(--Neutral-7);
   }
-}
 
-@media only screen and (max-width: 640px) {
-  .cards {
-    grid-template-columns: 1fr;
-    max-width: 450px;
-    gap: 60px 40px;
+  .card:hover {
+    background: var(--Neutral-1);
+  }
+
+  .card:hover .bidPrice,
+  .card:hover .price {
+    color: var(--Neutral-7);
+  }
+
+  .card:hover .priceContainer {
+    border-top: 1px solid #d9d9d9;
+  }
+
+  .card:hover .priceContainer::before {
+    background: #d9d9d9;
   }
 }

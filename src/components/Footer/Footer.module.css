@@ -72,11 +72,20 @@
 .cookies {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 40px;
 }
 .cookiesText,
 .copyRight {
   color: var(--Neutral-4);
+}
+.acceptButton {
+  margin-left: auto;
+}
+.acceptButton:hover {
+  background: var(--Neutral-7);
+  color: var(--Neutral-1);
+  transform: translateY(-1);
 }
 
 @media only screen and (max-width: 1199px) {
@@ -100,6 +109,23 @@
   .item {
     font-size: 14px;
   }
+  .copyRightContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .cookies {
+    gap: 20px;
+  }
+  .copyRight {
+    grid-column: 1/-1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .cookies {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -113,6 +139,19 @@
   }
 }
 @media only screen and (max-width: 520px) {
-  .wrapper {
+  .copyRightContainer {
+    gap: 12px;
+  }
+  .cookies {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  .cookiesText {
+    text-align: center;
+  }
+  .acceptButton {
+    margin: 0 auto;
   }
 }

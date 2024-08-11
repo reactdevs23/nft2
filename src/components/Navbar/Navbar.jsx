@@ -6,7 +6,7 @@ import classes from "./Navbar.module.css";
 
 import { Link } from "react-router-dom";
 
-import { avater, logo, notificationIcon } from "images";
+import { avatar, logo, notificationIcon } from "images";
 import Dropdown from "./Dropdown/Dropdown";
 import { Button, Input } from "components/common";
 import { FiPlus } from "react-icons/fi";
@@ -115,7 +115,7 @@ const Navbar = () => {
                   />
                 </button>
                 <button>
-                  <img src={avater} alt="#" className={classes.avaterImg} />
+                  <img src={avatar} alt="#" className={classes.avatarImg} />
                 </button>
               </>
             )}

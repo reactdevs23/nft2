@@ -23,12 +23,11 @@
   z-index: 2;
 }
 .bottomBar {
-  max-width: 1440px;
   width: 90%;
   margin: 0 auto;
   margin-top: auto;
   padding: 80px 0;
-  padding-top: 140px;
+  padding-top: 120px;
   z-index: 10;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -103,6 +102,16 @@
 @media only screen and (max-width: 991px) {
   .bottomBar {
     grid-template-columns: 1fr;
+  }
+
+  .leftSide {
+    max-width: 100%;
+    width: 100%;
+  }
+  .viewNftButton,
+  .placeABidButton {
+    width: 100%;
+    max-width: 100%;
   }
 }
 @media only screen and (max-width: 520px) {

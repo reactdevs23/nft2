@@ -14,7 +14,8 @@
 .buttonContainer {
   display: flex;
   align-items: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 12px 20px;
 }
 .appleIcon {
   font-size: 20px;
@@ -31,5 +32,10 @@
   .container {
     width: 90%;
     margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .button {
+    width: 100%;
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Tabs.module.css";
-import { MdClose } from "react-icons/md";
+
 import clsx from "clsx";
 
 const Tabs = ({ tabs, activeTab, setActiveTab, className }) => {
